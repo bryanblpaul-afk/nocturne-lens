@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Nocturne Lens | Wildlife & Nature Photography</title>
-    
     <meta name="description" content="Explore professional wildlife and nature photography by Bryan Paul. Stunning prints and moments captured in nature.">
     <meta property="og:title" content="Nocturne Lens | Wildlife Photography">
     <meta property="og:description" content="Stunning wildlife and nature photography by Bryan Paul. Explore the collection.">
@@ -13,7 +11,6 @@
     <meta property="og:url" content="https://bryanblpaul-afk.github.io/nocturne-lens/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#050505">
-
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -31,6 +28,7 @@
     <nav>
         <a href="#">Home</a>
         <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -38,6 +36,15 @@
 <section class="hero">
     <h2>The Art Of Observing Nature</h2>
     <p class="subtitle">Wildlife & Nature Photography by Bryan Paul</p>
+</section>
+
+<section id="about" style="padding: 60px 20px; text-align: center; max-width: 800px; margin: 0 auto;">
+    <h2 style="font-family: 'Cinzel', serif; margin-bottom: 20px;">About Me</h2>
+    <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">
+        Hi, I'm Bryan Paul, an 18-year-old wildlife photographer dedicated to capturing the raw, quiet moments of the natural world. 
+        What started as a hobby has evolved into a journey of patience, observation, and respect for the wild. 
+        Through Nocturne Lens, I aim to share the beauty I encounter, hoping to inspire a deeper connection with the animals and landscapes that share our planet.
+    </p>
 </section>
 
 <section class="filters">
@@ -49,41 +56,13 @@
 
 <section id="gallery" class="gallery">
     <div class="photo birds">
-        <img src="images/photo1.jpg" alt="Close-up of a bird in nature" loading="lazy" onclick="openViewer(this)">
+        <img src="images/photo1.jpg" alt="Bird photography" loading="lazy" onclick="openViewer(this)">
         <div class="photoButtons">
             <a href="#">Buy</a>
             <a href="#contact">Contact</a>
         </div>
     </div>
-    <div class="photo animals">
-        <img src="images/photo2.jpg" alt="Wildlife animal photography" loading="lazy" onclick="openViewer(this)">
-        <div class="photoButtons">
-            <a href="#">Buy</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
-    <div class="photo landscape">
-        <img src="images/photo3.jpg" alt="Nature landscape photography" loading="lazy" onclick="openViewer(this)">
-        <div class="photoButtons">
-            <a href="#">Buy</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
-    <div class="photo birds">
-        <img src="images/photo4.jpg" alt="Bird in flight" loading="lazy" onclick="openViewer(this)">
-        <div class="photoButtons">
-            <a href="#">Buy</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
-    <div class="photo animals">
-        <img src="images/photo5.jpg" alt="Wild animal portrait" loading="lazy" onclick="openViewer(this)">
-        <div class="photoButtons">
-            <a href="#">Buy</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
-</section>
+    </section>
 
 <div id="viewer">
     <span id="closeViewer" onclick="closeViewer()">×</span>
