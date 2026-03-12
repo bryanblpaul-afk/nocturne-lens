@@ -1,152 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Nocturne Lens</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nocturne Lens</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-
-<!-- INTRO SCREEN -->
-
 <div id="intro">
-<h1 class="intro-logo">NOCTURNE LENS</h1>
-<p>Light. Color. Moment</p>
+    <h1 class="intro-logo">NOCTURNE LENS</h1>
+    <p>Light. Color. Moment</p>
 </div>
-
-
-<!-- FOG EFFECT -->
 
 <div class="fog"></div>
 
-
-<!-- NAVBAR -->
-
 <header>
-
-<h1 class="logo">Nocturne Lens</h1>
-
-<nav>
-<a href="#">Home</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
-
+    <h1 class="logo">Nocturne Lens</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-
-<!-- HERO SECTION -->
-
 <section class="hero">
-
-<h2>The Art Of Observing Nature</h2>
-
-<p class="subtitle">
-Wildlife & Nature Photography by Bryan Paul
-</p>
-
+    <h2>The Art Of Observing Nature</h2>
+    <p class="subtitle">Wildlife & Nature Photography by Bryan Paul</p>
 </section>
-
-
-<!-- FILTER BUTTONS -->
 
 <section class="filters">
-
-<button onclick="filterPhotos('all')">All</button>
-<button onclick="filterPhotos('birds')">Birds</button>
-<button onclick="filterPhotos('animals')">Animals</button>
-<button onclick="filterPhotos('landscape')">Landscapes</button>
-
+    <button onclick="filterPhotos('all')">All</button>
+    <button onclick="filterPhotos('birds')">Birds</button>
+    <button onclick="filterPhotos('animals')">Animals</button>
+    <button onclick="filterPhotos('landscape')">Landscapes</button>
 </section>
-
-
-<!-- GALLERY -->
 
 <section id="gallery" class="gallery">
-
-<div class="photo birds">
-<img src="images/photo1.jpg" onclick="openViewer(this)">
-<div class="photoButtons">
-<a href="#">Buy</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
-
-
-<div class="photo animals">
-<img src="images/photo2.jpg" onclick="openViewer(this)">
-<div class="photoButtons">
-<a href="#">Buy</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
-
-
-<div class="photo landscape">
-<img src="images/photo3.jpg" onclick="openViewer(this)">
-<div class="photoButtons">
-<a href="#">Buy</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
-
-
-<div class="photo birds">
-<img src="images/photo4.jpg" onclick="openViewer(this)">
-<div class="photoButtons">
-<a href="#">Buy</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
-
-
-<div class="photo animals">
-<img src="images/photo5.jpg" onclick="openViewer(this)">
-<div class="photoButtons">
-<a href="#">Buy</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
-
+    <div class="photo birds">
+        <img src="images/photo1.jpg" alt="Bird photography" onclick="openViewer(this)">
+        <div class="photoButtons">
+            <a href="#">Buy</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <div class="photo animals">
+        <img src="images/photo2.jpg" alt="Animal photography" onclick="openViewer(this)">
+        <div class="photoButtons">
+            <a href="#">Buy</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <div class="photo landscape">
+        <img src="images/photo3.jpg" alt="Landscape photography" onclick="openViewer(this)">
+        <div class="photoButtons">
+            <a href="#">Buy</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <div class="photo birds">
+        <img src="images/photo4.jpg" alt="Bird photography" onclick="openViewer(this)">
+        <div class="photoButtons">
+            <a href="#">Buy</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <div class="photo animals">
+        <img src="images/photo5.jpg" alt="Animal photography" onclick="openViewer(this)">
+        <div class="photoButtons">
+            <a href="#">Buy</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
 </section>
-
-
-<!-- IMAGE VIEWER -->
 
 <div id="viewer">
-
-<span id="closeViewer" onclick="closeViewer()">×</span>
-
-<img id="viewerImage">
-
+    <span id="closeViewer" onclick="closeViewer()">×</span>
+    <img id="viewerImage" src="" alt="Full view">
 </div>
 
-
-<!-- CONTACT -->
-
 <section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: bryanblpaul@gmail.com</p>
-
+    <h2>Contact</h2>
+    <p>Email: bryanblpaul@gmail.com</p>
 </section>
 
-
 <script src="script.js"></script>
-
 </body>
-
 </html>
-
-
