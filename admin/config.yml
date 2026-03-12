@@ -1,1 +1,22 @@
+backend:
+  name: github
+  repo: bryanblpaul-afk/nocturne-lens # Ensure this matches your GitHub repo path
+  branch: main
 
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - file: "gallery.json"
+        label: "Gallery Data"
+        name: "gallery"
+        fields:
+          - {label: "Photos", name: "photos", widget: "list", fields: [
+              {label: "Image", name: "src", widget: "image"},
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Settings", name: "settings", widget: "string"},
+              {label: "Story", name: "story", widget: "text"}
+            ]}
