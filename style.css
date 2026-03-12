@@ -33,7 +33,7 @@ nav a:hover { color:white; }
 #intro { position:fixed; width:100%; height:100vh; background:black; display:flex; flex-direction:column; justify-content:center; align-items:center; z-index:999; transition:opacity 2s; }
 .intro-logo { font-size:60px; letter-spacing:8px; font-family: 'Cinzel', serif; }
 
-.fog { position:fixed; top:0; left:0; width:200%; height:100%; background:radial-gradient(circle at center, rgba(255,255,255,0.03), transparent 60%); pointer-events:none; animation: fogMove 30s linear infinite alternate; }
+.fog { position:fixed; top:0; left:0; width:200%; height:100%; background:radial-gradient(circle at center, rgba(255,255,255,0.03), transparent 60%); pointer-events:none; animation: fogMove 30s linear infinite alternate; z-index: 1; }
 
 @keyframes fogMove { 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
 
