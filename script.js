@@ -1,60 +1,35 @@
-function scrollGallery(){
-
-document.getElementById("gallery").scrollIntoView({
-behavior:"smooth"
-})
-
+// Viewer Controls
+function openViewer(img) {
+    document.getElementById("viewer").style.display = "flex";
+    document.getElementById("viewerImage").src = img.src;
 }
 
-window.addEventListener("load", function(){
-
-setTimeout(function(){
-
-document.getElementById("intro").style.opacity="0";
-
-setTimeout(function(){
-document.getElementById("intro").style.display="none";
-},2000)
-
-},3000)
-
-})
-
-function openViewer(img){
-
-document.getElementById("viewer").style.display="flex"
-document.getElementById("viewerImage").src = img.src
-
+function closeViewer() {
+    document.getElementById("viewer").style.display = "none";
 }
 
-function closeViewer(){
+// Close on Escape Key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') closeViewer();
+});
 
-document.getElementById("viewer").style.display="none"
-
+// Filtering Logic
+function filterPhotos(category) {
+    document.querySelectorAll(".photo").forEach(photo => {
+        const show = (category === 'all' || photo.classList.contains(category));
+        photo.style.display = show ? "block" : "none";
+    });
 }
 
-function filterPhotos(category){
+// Intro Animation
+window.addEventListener("load", function() {
+    setTimeout(() => {
+        document.getElementById("intro").style.opacity = "0";
+        setTimeout(() => {
+            document.getElementById("intro").style.display = "none";
+        }, 2000);
+    }, 3000);
+});
 
-let photos = document.querySelectorAll(".photo")
-
-photos.forEach(photo => {
-
-if(category === "all"){
-photo.style.display="block"
-}
-
-else if(photo.classList.contains(category)){
-photo.style.display="block"
-}
-
-else{
-photo.style.display="none"
-}
-
-})
-
-}
-
-document.addEventListener("contextmenu", function(e){
-e.preventDefault()
-})
+// Security Deterrent
+document.addEventListener("contextmenu", (e) => e.preventDefault());
