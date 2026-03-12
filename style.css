@@ -1,0 +1,197 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050505;
+color:white;
+font-family:Poppins;
+overflow-x:hidden;
+}
+
+img{
+user-select:none;
+-webkit-user-drag:none;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(6px);
+}
+
+.logo{
+font-family:Cinzel;
+letter-spacing:3px;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#aaa;
+}
+
+nav a:hover{
+color:white;
+}
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero h2{
+font-size:48px;
+font-family:Cinzel;
+}
+
+.hero button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+background:white;
+cursor:pointer;
+}
+
+.filters{
+text-align:center;
+padding:20px;
+}
+
+.filters button{
+margin:5px;
+padding:10px 20px;
+border:none;
+background:#222;
+color:white;
+cursor:pointer;
+}
+
+.filters button:hover{
+background:#444;
+}
+
+.gallery{
+padding:60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.photo{
+position:relative;
+overflow:hidden;
+}
+
+.photo img{
+width:100%;
+transition:0.5s;
+}
+
+.photo:hover img{
+transform:scale(1.1);
+filter:brightness(50%);
+}
+
+.photoButtons{
+position:absolute;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+opacity:0;
+transition:0.3s;
+}
+
+.photo:hover .photoButtons{
+opacity:1;
+}
+
+.photoButtons a{
+background:white;
+color:black;
+padding:8px 15px;
+margin:5px;
+text-decoration:none;
+}
+
+#contact{
+text-align:center;
+padding:60px;
+background:#080808;
+}
+
+#intro{
+position:fixed;
+width:100%;
+height:100vh;
+background:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:999;
+transition:opacity 2s;
+}
+
+.intro-logo{
+font-size:60px;
+letter-spacing:8px;
+font-family:Cinzel;
+}
+
+#intro p{
+color:#777;
+margin-top:10px;
+}
+
+.fog{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:url("https://i.imgur.com/8hQZ7Z6.png");
+opacity:0.06;
+animation:fogMove 60s linear infinite;
+pointer-events:none;
+}
+
+@keyframes fogMove{
+0%{transform:translateX(0);}
+100%{transform:translateX(-1000px);}
+}
+
+#viewer{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+#viewer img{
+max-width:90%;
+max-height:90%;
+}
+
+#closeViewer{
+position:absolute;
+top:30px;
+right:40px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
