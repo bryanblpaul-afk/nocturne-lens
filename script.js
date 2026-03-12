@@ -2,15 +2,22 @@
 fetch('gallery.json')
     .then(response => response.json())
     .then(data => {
-        const gallery = document.getElementById('gallery');
-        // Clear any placeholder text
-        gallery.innerHTML = ''; 
+        // CMS Compatibility: Check if data is wrapped in a 'photos' key
+        // If 'data.photos' exists, use it; otherwise, use 'data' (for your old format)
+        const photoList = data.photos || data; 
         
-        data.forEach(photo => {
+        const gallery = document.getElementById('gallery');
+        gallery.innerHTML = ''; // Clear placeholder text
+        
+        photoList.forEach(photo => {
             const div = document.createElement('div');
             div.className = 'photo';
+            // Note: Ensure the image path from CMS starts with the correct folder
+            // CMS often returns paths like "photo1.jpg"; we ensure it's "images/photo1.jpg"
+            const imgSrc = photo.src.startsWith('images/') ? photo.src : `images/${photo.src}`;
+            
             div.innerHTML = `
-                <img src="${photo.src}" alt="${photo.title}" onclick="openViewer('${photo.src}')">
+                <img src="${imgSrc}" alt="${photo.title}" onclick="openViewer('${imgSrc}')">
                 <div class="photo-info">
                     <h3>${photo.title}</h3>
                     <p>${photo.settings}</p>
@@ -26,12 +33,17 @@ fetch('gallery.json')
 function openViewer(src) {
     const viewer = document.getElementById('viewer');
     const viewerImg = document.getElementById('viewerImage');
-    viewerImg.src = src;
-    viewer.style.display = 'flex';
+    if (viewer && viewerImg) {
+        viewerImg.src = src;
+        viewer.style.display = 'flex';
+    }
 }
 
 function closeViewer() {
-    document.getElementById('viewer').style.display = 'none';
+    const viewer = document.getElementById('viewer');
+    if (viewer) {
+        viewer.style.display = 'none';
+    }
 }
 
 // 3. Hide the Intro "Curtain" after 3 seconds
