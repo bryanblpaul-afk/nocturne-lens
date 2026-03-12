@@ -2,13 +2,13 @@
   {
     "src": "images/photo1.jpg",
     "title": "Great Horned Owl",
-    "settings": "Sony A7IV, 600mm, 1/1000s, f/6.3, ISO 800",
-    "story": "Spent three hours in the brush waiting for this moment."
+    "settings": "Sony A7IV, 600mm, 1/1000s",
+    "story": "I spent four hours hidden in the brush."
   },
   {
     "src": "images/photo2.jpg",
     "title": "Mountain Stag",
-    "settings": "Canon R5, 100-500mm, 1/500s, f/5.6, ISO 400",
-    "story": "Caught him at sunrise near the ridge."
+    "settings": "Canon R5, 500mm, 1/500s",
+    "story": "Captured at sunrise."
   }
 ]
